@@ -2,6 +2,8 @@ A simple MongoDB adapter.
 
 **Forks and pull requests with fixes and improvements are really well welcome! This is pretty much beta and not ready for production.**
 
+**Documentation coming soon!**
+
 Install
 =======
 
