@@ -10,28 +10,28 @@ Install
 Usage
 =====
 ```ruby
-    class MyTestClass
-	  include SimpleMongo::Model
-	  field :test
+class MyTestClass
+  include SimpleMongo::Model
+  field :test
   
-	  validations do 
-	    validates_custom :test do |field|
-		  field == "something"      
-		end
-	  end
+  validations do 
+    validates_custom :test do |field|
+      field == "something"      
+    end
+  end
   
-	  before_save do
-	    self.test = 'pablo'
-	  end
-	end
+  before_save do
+    self.test = 'pablo'
+  end
+end
 
-	connection = SimpleMongo::Connection.new(:database => 'test')
+connection = SimpleMongo::Connection.new(:database => 'test')
 
-	model = MyTestClass.new(:test => 'yay')
+model = MyTestClass.new(:test => 'yay')
 
-	model.save
+model.save
 
-	puts model.test
+puts model.test
 ```
 
 Author
