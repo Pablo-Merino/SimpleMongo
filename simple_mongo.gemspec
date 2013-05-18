@@ -8,9 +8,11 @@ Gem::Specification.new name, SimpleMongo::VERSION do |s|
 	s.authors = ["Pablo Merino"]
 	s.email = "pablo@wearemocha.com"
 	s.homepage = "http://github.com/pablo-merino/#{name}"
-	s.files = `git ls-files`.split("\n")
+	s.files = Dir['**/*']
 	s.license = "MIT"
 	s.add_dependency('active_support', ['~> 3.0.0'])
 	s.add_dependency("colored", ["~> 1.2"])  
+	s.add_dependency("mongo", ["~> 1.8.6"])  
+	s.add_dependency("bson_ext", ["~> 1.8.6"])  
 
 end

@@ -1,5 +1,5 @@
 module SimpleMongo
-
+  require 'mongo'
   @client = nil
   @database = nil
   @connection = nil
@@ -22,7 +22,7 @@ module SimpleMongo
       }.merge(options || {})
     
       if @opts[:database].nil?
-        raise Errors::NoDBOrCollectionException, "You must specify a database"
+        raise Errors::NoDBSpecifiedException, "You must specify a database"
       end
     
       @client = Mongo::MongoClient.new(@opts[:host], @opts[:port])
